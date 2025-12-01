@@ -34,18 +34,21 @@ Randomly prints a programmer joke.
 ## 🟢 Sample Output
 
 ✅ file1_dice_roller.py
+
 Rolling the dice...
 You got: 5 🎲
 
 ---
 
 ✅ file2_coin_flip.py
+
 Flipping coin...
 Result: Heads
 
 ---
 
 ✅ file3_joke_generator.py
+
 Here's a joke for you:
 Why don't programmers like nature?
 It has too many bugs! 😂
@@ -53,16 +56,19 @@ It has too many bugs! 😂
 ---
 
 ✅ file4_random_password_generator.py
+
 Enter password length: 10
 Generated Password: aS#8kLp!90
 
 ---
 
 ✅ file5_color_changer_cli.py
+
 (Colors keep changing repeatedly...)
 Python is Fun!
 
 ---
 
 ✅ file6_random_story_maker.py
+
 Once upon a time, a unicorn went under the ocean and built a time machine!
