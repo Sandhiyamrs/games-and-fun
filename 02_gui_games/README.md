@@ -23,3 +23,23 @@ Two players can play interactively with a nice GUI
 Classic Snake Game built with Python Tkinter.  
 Control the snake using arrow keys to eat food and grow longer.
 
+-----
+
+## 🟢 Sample Output (GUI Description)
+
+✅ file1_tic_tac_toe_gui.py
+A window opens with a 3x3 grid.
+Players click buttons to place X and O.
+A popup message appears:
+"Player X Wins!" or "It's a Draw!"
+
+---
+
+✅ file2_snake_game_gui.py
+A window shows the Snake game.
+Use arrow keys to move the snake.
+Score increases when food is eaten.
+Game Over popup appears when snake hits wall/body.
+
+---
+
