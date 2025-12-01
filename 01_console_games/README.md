@@ -46,10 +46,11 @@ Guess again: 4
 Too low!
 Guess again: 6
 Correct! You guessed the number!
+
 ---
 
 ## file2_tic_tac_toe.py
-### Sample Output
+### 🟢 Sample Output
  X | O | X
 -----------
  O | X |  
@@ -57,13 +58,15 @@ Correct! You guessed the number!
    |   | O
 
 Player X wins!
+
 ---
 
 ## file3_rock_paper_scissors.py
-### Sample Output
+### 🟢 Sample Output
 Enter your choice (rock/paper/scissors): rock
 Computer chose: scissors
 You win! 🎉
+
 ---
 
 
