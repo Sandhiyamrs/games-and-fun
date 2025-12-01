@@ -1,24 +1,13 @@
-# 🧩 Puzzle Games
+# ❓ Quiz Games
 
-This folder contains mind-challenging puzzle games created using Python.  
-Each game focuses on logic, memory, or pattern-solving skills.
+This folder contains a collection of quiz-based mini-games in Python.  
+Each quiz tests your knowledge in different subjects and provides instant scoring.
 
 ## 📌 Included Files
-- `file1_word_scramble.py` – Unscramble the shuffled word.
-- `file2_memory_match.py` – Simple memory-card matching game (console version).
-- `file3_sudoku_checker.py` – Validates whether a 9×9 Sudoku is correct.
+- `file1_general_knowledge_quiz.py` – Basic GK questions.
+- `file2_math_quiz.py` – Simple arithmetic quiz.
+- `file3_science_quiz.py` – Basic science questions.
+- `file4_programming_quiz.py` – Quiz for coding & programming concepts.
+- `file5_logo_guess_quiz.py` – Guess the brand/company name from hints.
 
-Enjoy solving these puzzles!
-
-# General Knowledge Quiz
-
-Simple console-based quiz game with multiple general knowledge questions.  
-Shows score at the end.
-
-------
-
-# Math Quiz
-
-Random math addition problems to test your skills.  
-Score displayed at the end.
-
+Enjoy playing and learning!
