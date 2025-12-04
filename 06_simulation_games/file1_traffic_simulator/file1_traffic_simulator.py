@@ -1,95 +1,49 @@
-import math
 import random
+from collections import deque
+import statistics
 
-def print_board(board):
-    print("\n")
-    for row in board:
-        print(" | ".join(row))
-        print("-" * 9)
-    print("\n")
+def simulate_traffic(steps=100, arrival_prob=0.3, green_time=5, yellow_time=2, red_time=5):
+    queue = deque()
+    served_times = []
+    light_cycle = [('G', green_time), ('Y', yellow_time), ('R', red_time)]
+    cycle_index = 0
+    time_in_phase = 0
+    car_id = 0
+    served_count = 0
 
-def available_moves(board):
-    return [(r, c) for r in range(3) for c in range(3) if board[r][c] == " "]
+    for t in range(1, steps + 1):
+        # New arrivals
+        if random.random() < arrival_prob:
+            car_id += 1
+            queue.append((car_id, t))  # (id, arrival_time)
 
-def check_winner(board):
-    wins = [
-        [(0,0),(0,1),(0,2)], [(1,0),(1,1),(1,2)], [(2,0),(2,1),(2,2)],
-        [(0,0),(1,0),(2,0)], [(0,1),(1,1),(2,1)], [(0,2),(1,2),(2,2)],
-        [(0,0),(1,1),(2,2)], [(0,2),(1,1),(2,0)]
-    ]
-    for line in wins:
-        values = [board[r][c] for r, c in line]
-        if values == ["X","X","X"]: return "X"
-        if values == ["O","O","O"]: return "O"
-    return None
+        # Traffic light phase management
+        phase, duration = light_cycle[cycle_index]
+        # On green, serve up to 1 car per time unit (can be tuned)
+        if phase == 'G' and queue:
+            car, arrival_time = queue.popleft()
+            served_times.append(t - arrival_time)
+            served_count += 1
 
-def minimax(board, depth, is_maximizing):
-    winner = check_winner(board)
-    if winner == "O": return 1
-    if winner == "X": return -1
-    if not available_moves(board): return 0
+        time_in_phase += 1
+        if time_in_phase >= duration:
+            cycle_index = (cycle_index + 1) % len(light_cycle)
+            time_in_phase = 0
 
-    if is_maximizing:
-        best_score = -math.inf
-        for r, c in available_moves(board):
-            board[r][c] = "O"
-            score = minimax(board, depth + 1, False)
-            board[r][c] = " "
-            best_score = max(score, best_score)
-        return best_score
-    else:
-        best_score = math.inf
-        for r, c in available_moves(board):
-            board[r][c] = "X"
-            score = minimax(board, depth + 1, True)
-            board[r][c] = " "
-            best_score = min(score, best_score)
-        return best_score
+        # Print status occasionally
+        if t % (steps // 5 or 1) == 0:
+            print(f"[t={t}] phase={phase} queue={len(queue)} served={served_count}")
 
-def ai_move(board):
-    best_score = -math.inf
-    move = None
-    for r, c in available_moves(board):
-        board[r][c] = "O"
-        score = minimax(board, 0, False)
-        board[r][c] = " "
-        if score > best_score:
-            best_score = score
-            move = (r, c)
-    return move
+    avg_wait = statistics.mean(served_times) if served_times else 0
+    return {
+        "total_arrived": car_id,
+        "served": served_count,
+        "left_in_queue": len(queue),
+        "avg_wait_time": round(avg_wait, 2)
+    }
 
-def play():
-    board = [[" "]*3 for _ in range(3)]
-    print("Tic Tac Toe vs AI")
+if __name__ == "__main__":
+    results = simulate_traffic(steps=200, arrival_prob=0.35, green_time=6, yellow_time=2, red_time=6)
+    print("\nSimulation Results:", results)
 
-    while True:
-        print_board(board)
-        r = int(input("Enter row (0-2): "))
-        c = int(input("Enter col (0-2): "))
-        if board[r][c] != " ":
-            print("Invalid move!")
-            continue
-
-        board[r][c] = "X"
-
-        if check_winner(board) == "X":
-            print_board(board)
-            print("🎉 You Win!")
-            break
-
-        if not available_moves(board):
-            print_board(board)
-            print("Draw!")
-            break
-
-        print("AI thinking...")
-        r, c = ai_move(board)
-        board[r][c] = "O"
-
-        if check_winner(board) == "O":
-            print_board(board)
-            print("💀 AI Wins!")
-            break
-
-play()
 
