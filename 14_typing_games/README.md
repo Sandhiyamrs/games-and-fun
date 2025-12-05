@@ -17,9 +17,32 @@ Compares typed input with target text and calculates accuracy.
 ## 📌 Sample Outputs
 
 ### ▶ Typing Speed Test
-Displays time taken, WPM, and messages.
+⌨ Typing Speed Test
+Type the following:
+
+"Learning Python is fun!"
+
+Time taken: 9.2 seconds
+
+Words typed: 4
+
+WPM: 26.0
+
+Great job! 🚀
+
 
 ### ▶ Typing Accuracy Checker
-Shows mistakes and percentage accuracy.
+Typing Accuracy Checker
+
+Target: "Hello World"
+
+Typed:  "Helli Wurld"
+
+Mistakes: 2
+
+Accuracy: 81.8%
+
+Keep practicing! 💪
+
 
 ---
