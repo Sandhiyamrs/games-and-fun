@@ -46,6 +46,7 @@ Shot fired → Miss
 Wave cleared 🎉
 
 Score: 120
+
 Game Over!
 
 
