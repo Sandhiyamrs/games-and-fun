@@ -1,11 +1,11 @@
-📝 file1_traffic_simulator.py
+# 📝 file1_traffic_simulator.py
 ⭐ Description
 
 Simulates vehicles arriving at a traffic signal and shows how many pass per green signal.
 
 --
 
-# ✔️ Sample Output :
+ ✔️ Sample Output :
 
 🚦 Traffic Simulator
 Cars waiting: 12
@@ -21,14 +21,14 @@ Simulation complete ✔
 
 ---
 
-📝 file2_farming_simulator.py
+# 📝 file2_farming_simulator.py
 ⭐ Description
 
 Simulates planting, watering, and harvesting crops.
 
 --
 
-# ✔️ Sample Output :
+✔️ Sample Output :
 
 🌱 Farming Simulator
 Planting crop: Wheat
@@ -41,14 +41,14 @@ Total yield: 5 kg
 
 ---
 
-📝 file3_weather_simulator.py
+# 📝 file3_weather_simulator.py
 ⭐ Description
 
 Generates random weather conditions for a week.
 
 --
 
-# ✔️ Sample Output :
+✔️ Sample Output :
 
 Weather Forecast (Next 7 Days):
 
@@ -59,3 +59,6 @@ Day 4 → Thunderstorm ⛈, 22°C
 Day 5 → Sunny ☀️, 33°C
 Day 6 → Windy 🌬, 27°C
 Day 7 → Sunny ☀️, 31°C
+
+
+---
