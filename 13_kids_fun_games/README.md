@@ -17,9 +17,29 @@ Shows a color and asks the child to identify it.
 ## 📌 Sample Outputs
 
 ### ▶ Animal Sound Quiz
-Multiple-choice style guessing game.
+🐾 Animal Sound Quiz
+Which animal says 'Moo'?
+
+1) Dog
+2) Cow
+3) Cat
+
+Your Answer: 2
+Correct! 🎉
+
+Next Sound → 'Meow'
+
 
 ### ▶ Color Learning Game
-Correct/incorrect color identification feedback.
+🎨 Color Learning Game
+
+Color Shown: Red
+
+Your Answer: Red → Correct! ✔
+
+Color Shown: Yellow
+
+Your Answer: Blue → Wrong ❌ Try again!
+
 
 ---
