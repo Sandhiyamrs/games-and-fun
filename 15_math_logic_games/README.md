@@ -31,13 +31,17 @@ Tries Taken: 3
 
 ### ▶ Math Pattern Identifier
 🧠 Math Pattern Identifier
+
 Input sequence: 2, 4, 8, 16, 32
 
 Detected Pattern: ×2 each step
+
 Next Number: 64 ✔
 
 Input sequence: 1, 1, 2, 3, 5
+
 Detected Pattern: Fibonacci
+
 Next Number: 8 ✔
 
 
