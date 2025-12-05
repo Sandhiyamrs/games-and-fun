@@ -6,6 +6,7 @@ Simulates vehicles arriving at a traffic signal and shows how many pass per gree
 --
 
 # ✔️ Sample Output :
+
 🚦 Traffic Simulator
 Cars waiting: 12
 Signal turns GREEN...
@@ -28,6 +29,7 @@ Simulates planting, watering, and harvesting crops.
 --
 
 # ✔️ Sample Output :
+
 🌱 Farming Simulator
 Planting crop: Wheat
 Day 1: Watered ✔
@@ -47,6 +49,7 @@ Generates random weather conditions for a week.
 --
 
 # ✔️ Sample Output :
+
 Weather Forecast (Next 7 Days):
 
 Day 1 → Sunny ☀️, 32°C
