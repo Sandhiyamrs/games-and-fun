@@ -10,6 +10,9 @@ Files:
 Sample Output (file1_virtual_pet_basic.py):
 
 Welcome to TinyPet!
+
 Your pet is hungry.
+
 Do you want to feed it? (y/n): y
+
 Your pet is happy! ❤️
