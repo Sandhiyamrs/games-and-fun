@@ -59,3 +59,17 @@ OR (if invalid board):
 - ❌ Invalid Sudoku!
 
 ---
+
+✅ file4_crossword_checker.py
+
+-Word 1: python
+-Word 2: github
+-Word 3: puzzle
+-Correct words: 3/3
+
+---
+
+✅ file5_maze_solver.py
+
+Maze solved path: Start -> Right -> Right -> Down -> Down -> Right -> End
+
