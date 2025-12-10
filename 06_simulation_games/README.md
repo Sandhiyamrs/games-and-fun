@@ -22,32 +22,7 @@ Simulation complete ✔
 
 ---
 
-#  file2_farming_simulator.py
-
-⭐ Description
-
-Simulates planting, watering, and harvesting crops.
-
---
-
-✔️ Sample Output :
-
-🌱 Farming Simulator
-
-Planting crop: Wheat
-
-Day 1: Watered ✔
-
-Day 2: Watered ✔
-
-Day 3: Crop fully grown ✔
-
-Harvesting Wheat... 🌾
-Total yield: 5 kg
-
----
-
-#  file3_weather_simulator.py
+#  file2_weather_simulator.py
 
 ⭐ Description
 
