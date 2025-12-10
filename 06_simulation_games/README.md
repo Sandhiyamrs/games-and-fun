@@ -22,7 +22,8 @@ Simulation complete ✔
 
 ---
 
-# 📝 file2_farming_simulator.py
+#  file2_farming_simulator.py
+
 ⭐ Description
 
 Simulates planting, watering, and harvesting crops.
@@ -46,7 +47,8 @@ Total yield: 5 kg
 
 ---
 
-# 📝 file3_weather_simulator.py
+#  file3_weather_simulator.py
+
 ⭐ Description
 
 Generates random weather conditions for a week.
