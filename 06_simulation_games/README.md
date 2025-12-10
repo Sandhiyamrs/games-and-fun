@@ -54,9 +54,13 @@ Day 7 → Sunny ☀️, 31°C
 # file3_stock_market_sim.py
 
 Day 1: $108
+
 Day 2: $102
+
 Day 3: $110
+
 Day 4: $105
+
 Day 5: $100
 
 --
@@ -64,9 +68,13 @@ Day 5: $100
 # file4_population_growth.py
 
 Year 1: Population = 1100
+
 Year 2: Population = 1210
+
 Year 3: Population = 1331
+
 Year 4: Population = 1464
+
 Year 5: Population = 1610
 
 --
