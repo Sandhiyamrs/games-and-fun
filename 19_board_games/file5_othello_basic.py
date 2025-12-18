@@ -1,0 +1,1 @@
+print("Othello board initialized")
