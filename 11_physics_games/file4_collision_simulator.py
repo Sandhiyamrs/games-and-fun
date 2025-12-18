@@ -1,7 +1,14 @@
-m1, v1 = 2, 5
-m2, v2 = 3, -2
+print("⚛️ ELASTIC COLLISION SIMULATOR\n")
 
-v1f = ((m1-m2)/(m1+m2))*v1 + ((2*m2)/(m1+m2))*v2
-v2f = ((2*m1)/(m1+m2))*v1 + ((m2-m1)/(m1+m2))*v2
+m1 = float(input("Enter mass of object 1 (kg): "))
+v1 = float(input("Enter velocity of object 1 (m/s): "))
+m2 = float(input("Enter mass of object 2 (kg): "))
+v2 = float(input("Enter velocity of object 2 (m/s): "))
 
-print("Final velocities:", v1f, v2f)
+v1_final = ((m1 - m2) / (m1 + m2)) * v1 + ((2 * m2) / (m1 + m2)) * v2
+v2_final = ((2 * m1) / (m1 + m2)) * v1 + ((m2 - m1) / (m1 + m2)) * v2
+
+print("\n📊 FINAL VELOCITIES")
+print("-" * 30)
+print(f"Object 1 Final Velocity : {v1_final:.2f} m/s")
+print(f"Object 2 Final Velocity : {v2_final:.2f} m/s")
