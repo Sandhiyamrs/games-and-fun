@@ -1,27 +1,17 @@
 import random
-import time
 
-print("🧠 Quick Math Trainer")
-score = 0
+def math_trainer():
+    score = 0
+    for _ in range(5):
+        a, b = random.randint(1,10), random.randint(1,10)
+        answer = int(input(f"{a} + {b} = "))
+        if answer == a + b:
+            print("✔ Correct")
+            score += 1
+        else:
+            print("✖ Wrong")
 
-for _ in range(5):
-    a = random.randint(1, 20)
-    b = random.randint(1, 20)
-    op = random.choice(["+", "-"])
+    print(f"Final Score: {score}/5")
 
-    if op == "+":
-        ans = a + b
-    else:
-        ans = a - b
-
-    start = time.time()
-    user = int(input(f"{a} {op} {b} = "))
-    end = time.time()
-
-    if user == ans and (end - start) <= 5:
-        print("✔ Correct!")
-        score += 1
-    else:
-        print("❌ Wrong or too slow!")
-
-print("Your final score:", score)
+if __name__ == "__main__":
+    math_trainer()
