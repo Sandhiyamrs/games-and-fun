@@ -1,12 +1,11 @@
 import random
 import string
 
-print("🔐 Password Generator")
+def generate():
+    length = int(input("Password length: "))
+    chars = string.ascii_letters + string.digits + string.punctuation
+    password = "".join(random.choice(chars) for _ in range(length))
+    print("Generated Password:", password)
 
-length = int(input("Enter password length: "))
-
-chars = string.ascii_letters + string.digits + string.punctuation
-
-password = "".join(random.choice(chars) for _ in range(length))
-
-print("Generated password:", password)
+if __name__ == "__main__":
+    generate()
