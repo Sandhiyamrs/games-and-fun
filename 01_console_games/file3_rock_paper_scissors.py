@@ -1,26 +1,25 @@
-# Rock Paper Scissors
-
 import random
 
-options = ["rock", "paper", "scissors"]
+def game():
+    choices = ["rock", "paper", "scissors"]
+    computer = random.choice(choices)
 
-while True:
-    user_choice = input("Enter rock, paper, or scissors (or quit to exit): ").lower()
-    if user_choice == "quit":
-        break
-    if user_choice not in options:
+    user = input("Choose rock / paper / scissors: ").lower()
+
+    if user not in choices:
         print("Invalid choice!")
-        continue
+        return
 
-    comp_choice = random.choice(options)
-    print(f"Computer chose: {comp_choice}")
+    print(f"Computer chose: {computer}")
 
-    if user_choice == comp_choice:
-        print("It's a tie!")
-    elif (user_choice=="rock" and comp_choice=="scissors") or \
-         (user_choice=="paper" and comp_choice=="rock") or \
-         (user_choice=="scissors" and comp_choice=="paper"):
-        print("You win!")
+    if user == computer:
+        print("🤝 Draw")
+    elif (user == "rock" and computer == "scissors") or \
+         (user == "paper" and computer == "rock") or \
+         (user == "scissors" and computer == "paper"):
+        print("🎉 You win!")
     else:
-        print("You lose!")
+        print("💻 Computer wins!")
 
+if __name__ == "__main__":
+    game()
