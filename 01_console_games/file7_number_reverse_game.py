@@ -1,9 +1,9 @@
-print("🔢 Number Reverse Game")
+def reverse_game():
+    num = input("Enter a number: ")
+    if num.isdigit():
+        print("Reversed:", num[::-1])
+    else:
+        print("Invalid input!")
 
-num = input("Enter a number: ")
-
-if num.isdigit():
-    reversed_num = num[::-1]
-    print("Reversed number:", reversed_num)
-else:
-    print("❌ Invalid input! Enter digits only.")
+if __name__ == "__main__":
+    reverse_game()
