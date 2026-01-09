@@ -1,16 +1,21 @@
 import random
 
-words = ["python", "gaming", "fun", "terminal", "coding"]
+WORDS = ["python", "logic", "function", "variable"]
 
-word = random.choice(words)
-scrambled = "".join(random.sample(word, len(word)))
+def scramble(word):
+    return "".join(random.sample(word, len(word)))
 
-print("🔀 Word Scramble Game")
-print("Scrambled word:", scrambled)
+def play():
+    word = random.choice(WORDS)
+    scrambled = scramble(word)
 
-guess = input("Your guess: ")
+    print(f"Scrambled word: {scrambled}")
+    guess = input("Guess the word: ")
 
-if guess == word:
-    print("🎉 Correct!")
-else:
-    print("❌ Wrong! The word was:", word)
+    if guess == word:
+        print("🎉 Correct!")
+    else:
+        print(f"❌ Wrong! Word was: {word}")
+
+if __name__ == "__main__":
+    play()
