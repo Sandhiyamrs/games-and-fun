@@ -1,28 +1,33 @@
 import random
 
-words = ["python", "developer", "hangman", "programming", "computer"]
+WORDS = ["python", "developer", "hangman", "programming"]
 
-word = random.choice(words)
-guessed = ["_"] * len(word)
-attempts = 6
+def hangman():
+    word = random.choice(WORDS)
+    guessed = set()
+    attempts = 6
 
-print("🎯 Welcome to Hangman!")
+    while attempts > 0:
+        display = [c if c in guessed else "_" for c in word]
+        print("Word:", " ".join(display))
 
-while attempts > 0:
-    print("\nWord:", " ".join(guessed))
-    guess = input("Enter a letter: ").lower()
+        if "_" not in display:
+            print("🎉 You guessed the word!")
+            return
 
-    if guess in word:
-        print("✔ Correct!")
-        for i in range(len(word)):
-            if word[i] == guess:
-                guessed[i] = guess
-    else:
-        attempts -= 1
-        print(f"❌ Wrong! Attempts left: {attempts}")
+        guess = input("Guess a letter: ").lower()
 
-    if "_" not in guessed:
-        print("\n🎉 You win! The word was:", word)
-        break
-else:
-    print("\n💀 You lost! The word was:", word)
+        if guess in guessed:
+            print("Already guessed!")
+            continue
+
+        guessed.add(guess)
+
+        if guess not in word:
+            attempts -= 1
+            print(f"Wrong! Attempts left: {attempts}")
+
+    print(f"💀 Game Over! Word was: {word}")
+
+if __name__ == "__main__":
+    hangman()
