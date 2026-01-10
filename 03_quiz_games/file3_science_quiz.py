@@ -1,20 +1,18 @@
-print("🔬 Science Quiz")
 
 questions = {
-    "What planet is known as the Red Planet? ": "mars",
-    "What gas do plants produce during photosynthesis? ": "oxygen",
-    "What is the speed of light? (in km/s) ": "300000",
-    "What is H2O commonly known as? ": "water",
+    "Water chemical formula? ": "h2o",
+    "Gas used for breathing? ": "oxygen",
+    "Center of atom is called? ": "nucleus"
 }
 
 score = 0
+print("🔬 Science Quiz\n")
 
-for q, ans in questions.items():
-    user = input(q).lower()
-    if user == ans:
-        print("✔ Correct!")
+for q, a in questions.items():
+    if input(q).lower() == a:
         score += 1
+        print("✅ Correct\n")
     else:
-        print("✘ Wrong!")
+        print(f"❌ Wrong (Answer: {a})\n")
 
-print("\n🎯 Your Score:", score, "/", len(questions))
+print(f"Score: {score}/{len(questions)}")
