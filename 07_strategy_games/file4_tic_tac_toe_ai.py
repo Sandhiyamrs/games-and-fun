@@ -1,9 +1,24 @@
 import random
+
 board = [" "] * 9
-def print_board(): print(board[0:3], board[3:6], board[6:9])
-for i in range(5):
-    player = int(input("Your move (0-8): "))
-    board[player] = "X"
-    ai = random.choice([i for i in range(9) if board[i]==" "])
-    board[ai] = "O"
+
+def print_board():
+    for i in range(0, 9, 3):
+        print(board[i:i+3])
+
+def ai_move():
+    choices = [i for i in range(9) if board[i] == " "]
+    return random.choice(choices)
+
+print("🤖 Tic Tac Toe vs AI\n")
+
+for turn in range(5):
     print_board()
+    move = int(input("Your move (0-8): "))
+    board[move] = "X"
+
+    ai = ai_move()
+    board[ai] = "O"
+
+print_board()
+print("Game Finished")
