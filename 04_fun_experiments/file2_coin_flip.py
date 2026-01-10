@@ -1,6 +1,4 @@
-# Coin Flip
 import random
 
-result = random.choice(["Heads", "Tails"])
-print("Coin flip result:", result)
-
+print("🪙 Coin Flip")
+print("Result:", random.choice(["Heads", "Tails"]))
