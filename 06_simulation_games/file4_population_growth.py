@@ -1,5 +1,8 @@
-pop = 1000
-growth_rate = 0.1
-for year in range(1,6):
-    pop += int(pop*growth_rate)
-    print(f"Year {year}: Population = {pop}")
+population = 1000
+growth_rate = 0.05
+
+print("👥 Population Growth Simulation\n")
+
+for year in range(1, 11):
+    population += int(population * growth_rate)
+    print(f"Year {year}: Population = {population}")
