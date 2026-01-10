@@ -1,47 +1,19 @@
 import tkinter as tk
 
-root = tk.Tk()
-root.title("🧮 Calculator")
-
-expression = ""
-
-def press(num):
-    global expression
-    expression += str(num)
-    equation.set(expression)
-
-def equal():
-    global expression
+def calculate():
     try:
-        total = str(eval(expression))
-        equation.set(total)
-        expression = total
+        result.set(eval(entry.get()))
     except:
-        equation.set("Error")
-        expression = ""
+        result.set("Error")
 
-def clear():
-    global expression
-    expression = ""
-    equation.set("")
+root = tk.Tk()
+root.title("Calculator")
 
-equation = tk.StringVar()
-entry = tk.Entry(root, textvariable=equation, font=("Arial", 20), justify="right")
-entry.grid(columnspan=4)
+entry = tk.Entry(root, width=20)
+entry.pack()
 
-buttons = [
-    ('7',1,0), ('8',1,1), ('9',1,2), ('/',1,3),
-    ('4',2,0), ('5',2,1), ('6',2,2), ('*',2,3),
-    ('1',3,0), ('2',3,1), ('3',3,2), ('-',3,3),
-    ('0',4,0), ('.',4,1), ('=',4,2), ('+',4,3)
-]
+result = tk.StringVar()
+tk.Label(root, textvariable=result).pack()
 
-for (text,r,c) in buttons:
-    if text == "=":
-        tk.Button(root, text=text, width=5, command=equal).grid(row=r, column=c)
-    else:
-        tk.Button(root, text=text, width=5, command=lambda t=text: press(t)).grid(row=r, column=c)
-
-tk.Button(root, text="Clear", width=20, command=clear).grid(row=5, columnspan=4)
-
+tk.Button(root, text="Calculate", command=calculate).pack()
 root.mainloop()
