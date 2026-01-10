@@ -1,7 +1,14 @@
-import time, random
-input("Press Enter to start...")
+import time
+import random
+
+print("⚡ Reaction Time Test")
+print("Wait for GO...")
+
+time.sleep(random.randint(2, 5))
+print("GO!")
+
 start = time.time()
-time.sleep(random.randint(1,3))
-input("Press Enter when ready!")
+input()
 end = time.time()
-print(f"Reaction time: {round(end-start,2)} seconds")
+
+print(f"Your Reaction Time: {end - start:.3f} seconds")
