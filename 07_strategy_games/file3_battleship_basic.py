@@ -1,6 +1,11 @@
-import random
-board = ["~"]*5
-ship = random.randint(0,4)
-guess = int(input("Guess the ship position (0-4): "))
-if guess == ship: print("Hit! 🎯")
-else: print(f"Miss! Ship was at {ship}")
+grid = [["~"] * 5 for _ in range(5)]
+ship_position = (2, 3)
+
+print("🚢 Battleship Game\n")
+
+guess = (int(input("Row: ")), int(input("Column: ")))
+
+if guess == ship_position:
+    print("Hit! 💥 Ship destroyed!")
+else:
+    print("Miss! 🌊")
