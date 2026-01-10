@@ -1,23 +1,14 @@
-print("🏪 Logo Guess Quiz")
-print("Guess the brand based on the hint!\n")
-
-questions = {
-    "🔵 Blue circle logo with a white 'f' (social media)": "facebook",
-    "🟡 Yellow 'M' fast-food brand": "mcdonalds",
-    "🍎 Half-bitten apple logo": "apple",
-    "▶️ Red play button video platform": "youtube",
+logos = {
+    "Apple logo belongs to which company? ": "apple",
+    "Windows logo belongs to? ": "microsoft",
+    "Play button logo? ": "youtube"
 }
 
 score = 0
+print("🖼️ Logo Guess Quiz\n")
 
-for hint, answer in questions.items():
-    print("\nHint:", hint)
-    user = input("Your answer: ").lower()
-
-    if user == answer:
-        print("✔ Correct!")
+for q, a in logos.items():
+    if input(q).lower() == a:
         score += 1
-    else:
-        print("✘ Wrong!")
 
-print("\n🎉 Total Score:", score, "/", len(questions))
+print(f"Score: {score}/{len(logos)}")
