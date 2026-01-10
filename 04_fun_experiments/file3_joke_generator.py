@@ -1,10 +1,9 @@
-# Joke Generator
 jokes = [
-    "Why do programmers prefer dark mode? Because light attracts bugs!",
-    "Why do Java developers wear glasses? Because they don’t C#!",
-    "Debugging is like being the detective in a crime movie where you are also the murderer."
+    "Why did Python cross the road? To import the other side!",
+    "Why do programmers hate nature? Too many bugs.",
+    "Why was the computer cold? It forgot to close windows."
 ]
 
 import random
+print("😂 Joke:")
 print(random.choice(jokes))
-
