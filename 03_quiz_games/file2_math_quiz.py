@@ -1,15 +1,15 @@
-# Math Quiz
 import random
 
 score = 0
-for i in range(5):
-    a = random.randint(1,20)
-    b = random.randint(1,20)
+print("➕ Math Quiz\n")
+
+for _ in range(5):
+    a, b = random.randint(1, 10), random.randint(1, 10)
     ans = int(input(f"{a} + {b} = "))
-    if ans == a+b:
-        print("Correct!")
+    if ans == a + b:
+        print("✅ Correct\n")
         score += 1
     else:
-        print(f"Wrong! Answer: {a+b}")
-print(f"Your score: {score}/5")
+        print("❌ Wrong\n")
 
+print(f"Your Score: {score}/5")
