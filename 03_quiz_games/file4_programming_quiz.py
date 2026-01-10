@@ -1,20 +1,17 @@
-print("💻 Programming Quiz")
-
 questions = {
-    "What does HTML stand for? ": "hypertext markup language",
-    "Which keyword is used to define a function in Python? ": "def",
-    "What symbol is used for comments in Python? ": "#",
-    "JavaScript runs in the browser: True or False? ": "true",
+    "Water chemical formula? ": "h2o",
+    "Gas used for breathing? ": "oxygen",
+    "Center of atom is called? ": "nucleus"
 }
 
 score = 0
+print("🔬 Science Quiz\n")
 
-for q, ans in questions.items():
-    user = input(q).lower()
-    if user == ans:
-        print("✔ Correct!")
+for q, a in questions.items():
+    if input(q).lower() == a:
         score += 1
+        print("✅ Correct\n")
     else:
-        print("✘ Wrong!")
+        print(f"❌ Wrong (Answer: {a})\n")
 
-print("\n🏆 Final Score:", score, "/", len(questions))
+print(f"Score: {score}/{len(questions)}")
