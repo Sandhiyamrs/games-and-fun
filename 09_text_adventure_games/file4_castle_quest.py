@@ -1,3 +1,9 @@
-choice = input("Enter the castle (yes/no)? ").lower()
-if choice=="yes": print("You meet the king! 👑")
-else: print("You stay outside safely. 🏰")
+print("🏰 Castle Quest\n")
+
+print("You stand before an ancient castle.")
+choice = input("Enter the castle or walk away? ").lower()
+
+if choice == "enter":
+    print("You defeat the dragon and claim the treasure! 🐉💰")
+else:
+    print("You live safely but miss an adventure.")
