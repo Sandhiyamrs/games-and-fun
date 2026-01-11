@@ -1,7 +1,14 @@
-pos = 0
-while pos < 5:
-    move = input("Jump forward? (y): ")
-    if move == 'y':
-        pos += 1
-        print("Frog at position:", pos)
-print("🎉 You crossed the road!")
+print("🐸 Frogger")
+
+steps = 0
+while steps < 3:
+    move = input("Jump forward? (y/n): ")
+    if move == "y":
+        steps += 1
+        print("Safe jump!")
+    else:
+        print("Hit by car 💥")
+        break
+
+if steps == 3:
+    print("🎉 Frog crossed safely!")
