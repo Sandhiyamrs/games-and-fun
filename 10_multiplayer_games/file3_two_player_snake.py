@@ -1,2 +1,2 @@
-print("Player 1 moves W/A/S/D, Player 2 moves I/J/K/L")
-print("Game starts! 🐍")
+print("🐍 Two Player Snake (Text Version)")
+print("Players take turns moving. Demo logic only.")
