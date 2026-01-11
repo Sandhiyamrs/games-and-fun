@@ -1,8 +1,9 @@
 import time
 
-sentence = "Python is fun"
+text = "python is fun"
+print("Type:", text)
 start = time.time()
-input(sentence + "\n")
+typed = input()
 end = time.time()
 
-print("Time taken:", round(end-start,2), "seconds")
+print("Time:", round(end-start, 2), "seconds")
