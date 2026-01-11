@@ -1,9 +1,7 @@
-print("🏰 Castle Quest\n")
+print("🏰 Castle Quest")
 
-print("You stand before an ancient castle.")
-choice = input("Enter the castle or walk away? ").lower()
-
-if choice == "enter":
-    print("You defeat the dragon and claim the treasure! 🐉💰")
+decision = input("Fight dragon or sneak? ").lower()
+if decision == "fight":
+    print("You defeat the dragon 🐉")
 else:
-    print("You live safely but miss an adventure.")
+    print("You escape with gold 💰")
