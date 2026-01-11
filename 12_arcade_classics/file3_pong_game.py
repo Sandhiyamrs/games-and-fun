@@ -1,4 +1,9 @@
-print("Simple Pong Game")
-print("Ball moving...")
-for i in range(5):
-    print("🏓", " " * i)
+print("🏓 Pong Game")
+
+score = 0
+for _ in range(5):
+    move = input("Move paddle (left/right): ")
+    if move in ["left", "right"]:
+        score += 1
+
+print("Final Score:", score)
