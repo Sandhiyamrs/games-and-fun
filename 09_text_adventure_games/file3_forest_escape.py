@@ -1,9 +1,7 @@
-print("🌲 Forest Escape Adventure\n")
+print("🌲 Forest Escape")
 
-print("You are lost in a forest.")
-choice = input("Go left or right? ").lower()
-
-if choice == "left":
-    print("You find a village and escape safely! 🏡")
+path = input("Choose a path (river/mountain): ").lower()
+if path == "river":
+    print("You find a boat and escape 🚣")
 else:
-    print("You encounter wild animals! 🐺")
+    print("You encounter wild animals 🐺")
