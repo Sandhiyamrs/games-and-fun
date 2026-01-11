@@ -1,9 +1,9 @@
 print("🚀 Space Adventure\n")
 
-print("You are an astronaut lost in space.")
-choice = input("Do you explore a nearby alien ship? (yes/no): ").lower()
+print("You are stranded in space.")
+choice = input("Explore alien ship or wait? (explore/wait): ").lower()
 
-if choice == "yes":
-    print("You find advanced technology and survive! 🎉")
+if choice == "explore":
+    print("You find fuel and return safely! 🎉")
 else:
-    print("You drift endlessly in space... ☠️")
+    print("You run out of oxygen... ☠️")
