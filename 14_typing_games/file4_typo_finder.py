@@ -1,3 +1,6 @@
-text = "pythno"
-correct = "python"
-print("Mistakes:", sum(a!=b for a,b in zip(text, correct)))
+original = "programming"
+typed = input("Type 'programming': ")
+
+for i,(o,t) in enumerate(zip(original, typed)):
+    if o != t:
+        print(f"Typo at position {i}")
