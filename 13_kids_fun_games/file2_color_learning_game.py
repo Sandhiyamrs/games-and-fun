@@ -1,13 +1,7 @@
-colors = ["Red", "Blue", "Green", "Yellow"]
-import random
+print("🐶 Animal Sound Quiz")
 
-def color_game():
-    while True:
-        c = random.choice(colors)
-        ans = input(f"Type this color exactly → {c}: ")
-        if ans == c:
-            print("✔ Correct!\n")
-        else:
-            print("❌ Try again.\n")
-
-color_game()
+answer = input("What sound does a dog make? ").lower()
+if answer == "bark":
+    print("Correct! 🐕")
+else:
+    print("Try again!")
