@@ -1,10 +1,14 @@
-sounds = {
-    "Meow": "Cat",
-    "Woof": "Dog",
-    "Moo": "Cow",
-    "Neigh": "Horse"
-}
+print("🐸 Frogger")
 
-for sound, animal in sounds.items():
-    guess = input(f"Which animal makes '{sound}'? ")
-    print("Correct!\n" if guess.lower() == animal.lower() else f"Wrong! It is {animal}.\n")
+steps = 0
+while steps < 3:
+    move = input("Jump forward? (y/n): ")
+    if move == "y":
+        steps += 1
+        print("Safe jump!")
+    else:
+        print("Hit by car 💥")
+        break
+
+if steps == 3:
+    print("🎉 Frog crossed safely!")
