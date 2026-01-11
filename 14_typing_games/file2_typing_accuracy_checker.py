@@ -1,9 +1,9 @@
-text = "Python is super fun!"
+import time
 
-print(text)
-typed = input("\nType it exactly: ")
+text = "python is fun"
+print("Type:", text)
+start = time.time()
+typed = input()
+end = time.time()
 
-correct = sum(1 for a, b in zip(text, typed) if a == b)
-accuracy = (correct / len(text)) * 100
-
-print(f"Accuracy: {accuracy:.2f}%")
+print("Time:", round(end-start, 2), "seconds")
