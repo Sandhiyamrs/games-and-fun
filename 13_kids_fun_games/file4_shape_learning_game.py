@@ -1,3 +1,7 @@
-shapes = {"circle":"round", "square":"4 sides"}
-for s, d in shapes.items():
-    print(s, "→", d)
+print("🔺 Shape Learning")
+
+shape = input("Which shape has 3 sides? ").lower()
+if shape == "triangle":
+    print("Correct!")
+else:
+    print("Incorrect!")
