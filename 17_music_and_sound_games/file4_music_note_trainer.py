@@ -1,2 +1,3 @@
-notes = ["Do","Re","Mi"]
-print("Guess the note:", notes[1])
+note = "C"
+ans = input("Which note comes before D? ")
+print("Correct!" if ans.upper() == note else "Try again")
