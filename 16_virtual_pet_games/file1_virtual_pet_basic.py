@@ -1,3 +1,15 @@
-secret = 7
-guess = int(input("Guess number 1-10: "))
-print("Correct!" if guess == secret else "Wrong!")
+pet_name = input("Name your pet: ")
+hunger = 5
+
+print(f"{pet_name} is born!")
+
+while hunger > 0:
+    action = input("Feed pet? (y/n): ").lower()
+    if action == "y":
+        hunger -= 1
+        print("Pet is happier 😊")
+    else:
+        hunger += 1
+        print("Pet is getting hungry 😢")
+
+print(f"{pet_name} is fully satisfied!")
