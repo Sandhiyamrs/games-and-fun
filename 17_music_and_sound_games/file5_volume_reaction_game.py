@@ -1,2 +1,5 @@
-volume = int(input("Enter volume level: "))
-print("Too loud!" if volume>70 else "Good level")
+volume = int(input("Enter volume level (1–10): "))
+if volume > 7:
+    print("Too loud!")
+else:
+    print("Comfortable volume")
