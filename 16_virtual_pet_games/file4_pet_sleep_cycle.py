@@ -1,5 +1,4 @@
-energy = 5
-while energy > 0:
-    print("Pet playing 🐶")
-    energy -= 1
-print("Pet is sleeping 😴")
+print("A B | A AND B")
+for a in [0,1]:
+    for b in [0,1]:
+        print(a, b, "|", a and b)
