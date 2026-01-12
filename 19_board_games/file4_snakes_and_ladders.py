@@ -1,5 +1,6 @@
-import random
-pos = 0
-while pos < 20:
-    pos += random.randint(1,6)
-    print("Position:", pos)
+position = 0
+while position < 20:
+    roll = int(input("Roll dice: "))
+    position += roll
+    print("Position:", position)
+print("You won!")
