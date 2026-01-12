@@ -1,3 +1,7 @@
-num = int(input("Enter a number: "))
-is_prime = num > 1 and all(num%i for i in range(2,num))
-print("Prime!" if is_prime else "Not Prime")
+meals = 0
+while meals < 3:
+    input("Press Enter to feed pet 🍖")
+    meals += 1
+    print(f"Meals given: {meals}")
+
+print("Pet is full!")
