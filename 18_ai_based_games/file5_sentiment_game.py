@@ -1,2 +1,7 @@
-text = input("Enter sentence: ")
-print("Positive" if "good" in text else "Neutral")
+text = input("Type a sentence: ").lower()
+if "good" in text:
+    print("Positive sentiment 😊")
+elif "bad" in text:
+    print("Negative sentiment 😞")
+else:
+    print("Neutral sentiment 😐")
