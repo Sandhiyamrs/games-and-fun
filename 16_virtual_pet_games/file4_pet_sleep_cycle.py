@@ -1,4 +1,8 @@
-print("A B | A AND B")
-for a in [0,1]:
-    for b in [0,1]:
-        print(a, b, "|", a and b)
+import time
+
+print("Pet is sleeping 😴")
+for i in range(3):
+    print("ZzZ...")
+    time.sleep(1)
+
+print("Pet woke up refreshed!")
